@@ -1,9 +1,4 @@
 body {
-    background-image: url('background.jpg');
-    background-size: contain; /* Affiche l'image en entier, sans rognage */
-    background-repeat: no-repeat; /* Empêche la répétition de l'image */
-    background-position: center center;
-    background-attachment: fixed; /* Fixe l'image (ne défile pas avec la page) */
     background-color: #e6f0ff; /* Bleu pastel pour combler les espaces */
     margin: 0;
     font-family: Arial, sans-serif;
@@ -23,7 +18,7 @@ li {
 }
 
 .bande-haut {
-    background-color: #e6f0ff; /* Bleu pastel */
+    background-color: #ffffff; /* Bleu pastel */
     color: #333;
     text-align: center;
     padding: 10px 0;
@@ -31,5 +26,87 @@ li {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: relative;
     z-index: 10;
+    top: 60px;
     border-radius: 4px;
+}
+
+/* Barre en haut (header) */
+.whatsapp-header {
+    background-color: #075e54;
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 30;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #ffffff00;
+}
+
+.header-title {
+    font-weight: bold;
+    margin: 0;
+    font-size: 1.1em;
+}
+
+.header-right {
+    margin-right: 20px;
+}
+
+.header-right i {
+    font-size: 1.3em;
+    cursor: pointer;
+    color: white;
+}
+
+/* Conteneur des messages */
+.messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 70px 10px 60px 10px; /* Marge pour l'en-tête et le pied de page */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Bulle de message reçue (à gauche) */
+.message-recu {
+    background-color: white;
+    color: #121212;
+    padding: 10px 15px;
+    border-radius: 7.5px 7.5px 7.5px 0;
+    max-width: 70%;
+    word-wrap: break-word;
+    align-self: flex-start;
+    box-shadow: 0 1px 0.5px rgba(0, 0, 0, 0.13);
+}
+
+/* Bulle de message envoyé (à droite) */
+.message-envoye {
+    background-color: #dcf8c6;
+    color: #121212;
+    padding: 10px 15px;
+    border-radius: 7.5px 7.5px 0 7.5px;
+    max-width: 70%;
+    word-wrap: break-word;
+    align-self: flex-end;
+    box-shadow: 0 1px 0.5px rgba(0, 0, 0, 0.13);
 }
